@@ -939,9 +939,11 @@ const HomePage = () => {
               variants={contentVariants}
             >
               <div className="flex flex-col items-center justify-center h-full p-6">
-                <img
+                <Image
+                  width={100}
+                  height={100}
                   src="/logoWhiteHeaven.png"
-                  className="w-[50%]"
+                  className="w-[50%] h-auto"
                   alt="Logo"
                 />
               </div>
@@ -1047,10 +1049,10 @@ const HomePage = () => {
                   industry.
                 </p>
                 <p className="text-slate-600">
-                  Whether it's a college festival, corporate event, or music
-                  festival, we bring the same level of dedication and creativity
-                  to every project, tailoring our services to meet the unique
-                  needs and objectives of our clients.
+                  Whether it&apos;s a college festival, corporate event, or
+                  music festival, we bring the same level of dedication and
+                  creativity to every project, tailoring our services to meet
+                  the unique needs and objectives of our clients.
                 </p>
               </div>
             </div>
@@ -1319,7 +1321,7 @@ const HomePage = () => {
                   </h3>
                   <p className="text-slate-600">
                     High-quality videos, photos, and stories showcasing the
-                    brand's involvement and audience engagement.
+                    brand&apos;s involvement and audience engagement.
                   </p>
                 </div>
               </div>
@@ -1653,9 +1655,9 @@ const HomePage = () => {
                     Success Stories
                   </h3>
                   <p className="text-gray-600 italic">
-                    "White Heaven transformed our college fest into a
+                    &quot;White Heaven transformed our college fest into a
                     national-level event with their artist curation and flawless
-                    execution."
+                    execution.&quot;
                   </p>
                   <p className="text-gray-500 text-sm mt-2">
                     - IIT Bombay Fest Committee
@@ -1773,8 +1775,8 @@ const HomePage = () => {
                     Featured Event
                   </h3>
                   <p className="text-gray-600 italic">
-                    "The production quality and artist lineup for our annual EDM
-                    festival exceeded all expectations."
+                    &quot;The production quality and artist lineup for our annual EDM
+                    festival exceeded all expectations.&quot;
                   </p>
                   <p className="text-gray-500 text-sm mt-2">
                     - Sunburn Festival Team
@@ -1861,9 +1863,9 @@ const HomePage = () => {
                 Success Stories
               </h3>
               <p className="text-gray-600 text-center">
-                "Working with White Heaven elevated our brand presence at
+                &quot;Working with White Heaven elevated our brand presence at
                 college festivals nationwide. Their understanding of youth
-                culture is unmatched."
+                culture is unmatched.&quot;
               </p>
               <p className="text-gray-500 text-sm mt-4 text-center">
                 - Red Bull Marketing Team
@@ -1907,8 +1909,8 @@ const HomePage = () => {
                     Success Stories
                   </h3>
                   <p className="text-gray-600 italic">
-                    "The footfall at our festival doubled after partnering with
-                    White Heaven for artist bookings and promotions."
+                    &quot;The footfall at our festival doubled after partnering with
+                    White Heaven for artist bookings and promotions.&quot;
                   </p>
                   <p className="text-gray-500 text-sm mt-2">
                     - NH7 Weekender Organizers
@@ -2044,8 +2046,8 @@ const HomePage = () => {
                   ensuring seamless integration and maximum impact.
                 </p>
                 <p className="text-slate-600 text-center">
-                  We understand the importance of aligning the artist's style,
-                  energy, and vibe with the event's theme and objectives,
+                  We understand the importance of aligning the artist&apos;s style,
+                  energy, and vibe with the event&apos;s theme and objectives,
                   creating cohesive and memorable experiences.
                 </p>
                 <div className="mt-6 w-16 h-1 bg-yellow-300 rounded"></div>
@@ -2223,7 +2225,7 @@ const HomePage = () => {
 
               <div className="bg-[#f6f7f7] p-8 rounded-xl">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-6">
-                  LAST YEAR'S HIGHLIGHTS
+                  LAST YEAR&apos;S HIGHLIGHTS
                 </h3>
 
                 <div className="space-y-6">
@@ -2301,14 +2303,14 @@ const HomePage = () => {
                     variants={titleVariants}
                   >
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-800 relative z-10">
-                      Let's Collaborate!
+                      Let&apos;s Collaborate!
                     </h2>
                     <div className="absolute -bottom-2 left-0 w-24 h-2 bg-purple-500 z-0"></div>
                   </motion.div>
 
                   <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                     Partner with us to leverage the vibrant energy of college
-                    festivals. Amplify your brand's presence with our innovative
+                    festivals. Amplify your brand&apos;s presence with our innovative
                     and comprehensive marketing strategies.
                   </p>
 
@@ -2348,7 +2350,7 @@ const HomePage = () => {
                       Ready to Partner?
                     </h3>
                     <p className="text-purple-100 mb-6">
-                      We'd love to discuss how we can help amplify your brand
+                      We&apos;d love to discuss how we can help amplify your brand
                       through college festivals.
                     </p>
                     <button className="px-6 py-2 bg-white text-purple-600 rounded-full hover:bg-gray-100 transition-colors font-medium">
