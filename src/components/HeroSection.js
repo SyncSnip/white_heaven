@@ -1921,11 +1921,17 @@ const HomePage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image.png"
-                 
-                    alt="Audience"
+                    src="/logoonblack.png"
+                    alt="Audience testing"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <Image
+                    src="/image.png"
+                    alt="Audience testing"
+                    width={200}
+                    height={200}
+                    className="w-200 h-200"
                   />
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
