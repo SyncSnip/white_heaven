@@ -1668,7 +1668,7 @@ const HomePage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image1.jpg"
+                    src="/image.png"
                     alt="College Festival"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1676,7 +1676,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image1.jpg"
+                    src="/image.png"
                     alt="College Festival"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1684,7 +1684,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md col-span-2">
                   <Image
-                    src="/image1.jpg"
+                    src="/image.png"
                     alt="College Festival"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1719,7 +1719,7 @@ const HomePage = () => {
                 <div className="grid grid-cols-3 gap-4">
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/image1.jpg"
+                      src="/image.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1727,7 +1727,7 @@ const HomePage = () => {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/image1.jpg"
+                      src="/image.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1735,7 +1735,7 @@ const HomePage = () => {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/image1.jpg"
+                      src="/image.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1743,7 +1743,7 @@ const HomePage = () => {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md col-span-2">
                     <Image
-                      src="/image1.jpg"
+                      src="/image.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1751,7 +1751,7 @@ const HomePage = () => {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/image1.jpg"
+                      src="/image.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1775,8 +1775,8 @@ const HomePage = () => {
                     Featured Event
                   </h3>
                   <p className="text-gray-600 italic">
-                    &quot;The production quality and artist lineup for our annual EDM
-                    festival exceeded all expectations.&quot;
+                    &quot;The production quality and artist lineup for our
+                    annual EDM festival exceeded all expectations.&quot;
                   </p>
                   <p className="text-gray-500 text-sm mt-2">
                     - Sunburn Festival Team
@@ -1815,22 +1815,22 @@ const HomePage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
               {[
                 {
-                  img: "/image1.jpg",
+                  img: "/image.png",
                   name: "MTV India",
                   desc: "Music Awards Production Partner",
                 },
                 {
-                  img: "/image1.jpg",
+                  img: "/image.png",
                   name: "VH1",
                   desc: "Supersonic Festival Curators",
                 },
                 {
-                  img: "/image1.jpg",
+                  img: "/image.png",
                   name: "Red Bull",
                   desc: "Campus Event Series",
                 },
                 {
-                  img: "/image1.jpg",
+                  img: "/image.png",
                   name: "Amazon Prime",
                   desc: "Concert Series Producer",
                 },
@@ -1909,8 +1909,8 @@ const HomePage = () => {
                     Success Stories
                   </h3>
                   <p className="text-gray-600 italic">
-                    &quot;The footfall at our festival doubled after partnering with
-                    White Heaven for artist bookings and promotions.&quot;
+                    &quot;The footfall at our festival doubled after partnering
+                    with White Heaven for artist bookings and promotions.&quot;
                   </p>
                   <p className="text-gray-500 text-sm mt-2">
                     - NH7 Weekender Organizers
@@ -1921,7 +1921,8 @@ const HomePage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image1.jpg"
+                    src="/image.png"
+                 
                     alt="Audience"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1929,7 +1930,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image1.jpg"
+                    src="/image.png"
                     alt="Audience"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1937,7 +1938,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image1.jpg"
+                    src="/image.png"
                     alt="Audience"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -2046,9 +2047,9 @@ const HomePage = () => {
                   ensuring seamless integration and maximum impact.
                 </p>
                 <p className="text-slate-600 text-center">
-                  We understand the importance of aligning the artist&apos;s style,
-                  energy, and vibe with the event&apos;s theme and objectives,
-                  creating cohesive and memorable experiences.
+                  We understand the importance of aligning the artist&apos;s
+                  style, energy, and vibe with the event&apos;s theme and
+                  objectives, creating cohesive and memorable experiences.
                 </p>
                 <div className="mt-6 w-16 h-1 bg-yellow-300 rounded"></div>
               </div>
@@ -2310,8 +2311,8 @@ const HomePage = () => {
 
                   <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                     Partner with us to leverage the vibrant energy of college
-                    festivals. Amplify your brand&apos;s presence with our innovative
-                    and comprehensive marketing strategies.
+                    festivals. Amplify your brand&apos;s presence with our
+                    innovative and comprehensive marketing strategies.
                   </p>
 
                   <button className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-lg font-medium">
@@ -2350,8 +2351,8 @@ const HomePage = () => {
                       Ready to Partner?
                     </h3>
                     <p className="text-purple-100 mb-6">
-                      We&apos;d love to discuss how we can help amplify your brand
-                      through college festivals.
+                      We&apos;d love to discuss how we can help amplify your
+                      brand through college festivals.
                     </p>
                     <button className="px-6 py-2 bg-white text-purple-600 rounded-full hover:bg-gray-100 transition-colors font-medium">
                       Contact Our Team
