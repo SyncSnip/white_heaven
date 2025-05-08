@@ -1668,7 +1668,7 @@ const HomePage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image.png"
+                    src="/testImage.png"
                     alt="College Festival"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1676,7 +1676,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image.png"
+                    src="/testImage.png"
                     alt="College Festival"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1684,7 +1684,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md col-span-2">
                   <Image
-                    src="/image.png"
+                    src="/testImage.png"
                     alt="College Festival"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1719,7 +1719,7 @@ const HomePage = () => {
                 <div className="grid grid-cols-3 gap-4">
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/image.png"
+                      src="/testImage.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1727,7 +1727,7 @@ const HomePage = () => {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/image.png"
+                      src="/testImage.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1735,7 +1735,7 @@ const HomePage = () => {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/image.png"
+                      src="/testImage.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1743,7 +1743,7 @@ const HomePage = () => {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md col-span-2">
                     <Image
-                      src="/image.png"
+                      src="/testImage.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1751,7 +1751,7 @@ const HomePage = () => {
                   </div>
                   <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                     <Image
-                      src="/image.png"
+                      src="/testImage.png"
                       alt="Music Festival"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1815,22 +1815,22 @@ const HomePage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
               {[
                 {
-                  img: "/image.png",
+                  img: "/testImage.png",
                   name: "MTV India",
                   desc: "Music Awards Production Partner",
                 },
                 {
-                  img: "/image.png",
+                  img: "/testImage.png",
                   name: "VH1",
                   desc: "Supersonic Festival Curators",
                 },
                 {
-                  img: "/image.png",
+                  img: "/testImage.png",
                   name: "Red Bull",
                   desc: "Campus Event Series",
                 },
                 {
-                  img: "/image.png",
+                  img: "/testImage.png",
                   name: "Amazon Prime",
                   desc: "Concert Series Producer",
                 },
@@ -1921,7 +1921,7 @@ const HomePage = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image.png"
+                    src="/testImage.png"
                     alt="Audience"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1929,7 +1929,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image.png"
+                    src="/testImage.png"
                     alt="Audience"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
@@ -1937,7 +1937,7 @@ const HomePage = () => {
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-lg shadow-md">
                   <Image
-                    src="/image.png"
+                    src="/testImage.png"
                     alt="Audience"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-500"
