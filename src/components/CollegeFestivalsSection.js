@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import {SectionHeader} from "./SectionHeader";
-import {ImageStack} from "./ImageStack";
+import { SectionHeader } from "./SectionHeader";
+import { ImageStack } from "./ImageStack";
+import { LogoScroller } from "./LogoScroller";
 
 export const CollegeFestivalsSection = ({
   sectionRef,
@@ -21,20 +22,21 @@ export const CollegeFestivalsSection = ({
     >
       <div className="sticky top-0 h-screen flex items-center justify-center bg-white">
         <motion.div
-          className="flex items-center justify-center h-full p-6 max-w-7xl mx-auto w-full"
+          className="flex items-center justify-center h-full p-4 sm:p-6 max-w-7xl mx-auto w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={sectionVariants}
         >
-          <div className="grid md:grid-cols-2 gap-12 items-center h-full w-full">
-            <div className="flex flex-col justify-center h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center h-full w-full">
+            {/* Left Content (Sticky) */}
+            <div className="flex flex-col justify-center min-h-[300px] h-full">
               <SectionHeader
                 title="College Festivals"
                 highlightColor="bg-yellow-300"
               />
-              <div className="space-y-8">
-                <p className="text-2xl md:text-3xl font-light text-gray-700 leading-relaxed">
+              <div className="space-y-6 sm:space-y-8">
+                <p className="text-xl sm:text-2xl md:text-3xl font-light text-gray-700 leading-relaxed">
                   We have curated over{" "}
                   <span className="font-bold text-yellow-600 block">
                     200+ Colleges
@@ -46,30 +48,27 @@ export const CollegeFestivalsSection = ({
                     1000+ Artists
                   </span>
                 </p>
-                <div className="bg-gray-100 p-6 rounded-lg border-l-4 border-yellow-500">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                    Our Expertise
-                  </h3>
-                  <p className="text-gray-600">
-                    From intimate campus gatherings to massive inter-college
-                    festivals, we bring the perfect blend of artists, production
-                    quality, and unforgettable experiences to every event.
-                  </p>
-                </div>
                 <div className="flex space-x-2">
                   {collegeImages.map((_, index) => (
                     <div
                       key={index}
-                      className={`h-2 w-8 rounded-full transition-all duration-300 ${
-                        index <= currentImageIndex
+                      className={`h-2 w-6 sm:w-8 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex
                           ? "bg-yellow-500"
                           : "bg-gray-300"
                       }`}
                     />
                   ))}
                 </div>
+                <div className="pt-4 sm:pt-6">
+                  <div className="h-20 sm:h-24">
+                    <LogoScroller />
+                  </div>
+                </div>
               </div>
             </div>
+
+            {/* Right Content (Image Stack) */}
             <ImageStack
               collegeImages={collegeImages}
               currentImageIndex={currentImageIndex}

@@ -20,17 +20,38 @@ const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isImageStackActive, setIsImageStackActive] = useState(false);
 
   const sectionRef = useRef(null);
-  const imageStackRef = useRef(null);
 
   const collegeImages = [
-    "/testImage.png",
-    "/testImage.png",
-    "/testImage.png",
-    "/testImage.png",
-    "/testImage.png",
+    {
+      src: "/collegefestival1.jpg",
+      title: "(College) - Dhruva - IIM Trichy",
+    },
+    {
+      src: "/collegefestival2.jpg",
+      title: "(College) - GL Bajaj - Mohan Sisters 1",
+    },
+    {
+      src: "/collegefestival3.jpg",
+      title: "(College) - Kshitij - IIT Kharagpur - Krsna",
+    },
+    {
+      src: "/collegefestival4.jpg",
+      title: "(College) - Pravega - IISC Bangalore - Amit Trivedi",
+    },
+    {
+      src: "/collegefestival5.jpg",
+      title: "(College) - Blithchron - IIT GandhiNagar - Antara Mitra",
+    },
+    {
+      src: "/collegefestival6.jpg",
+      title: "(College) - Rhapsody - IISC Bangalore - Shreya Ghoshal 4 ",
+    },
+    {
+      src: "/collegefestival7.JPEG",
+      title: "(College) - GL Bajaj - Shreya Ghoshal",
+    },
   ];
 
   const navLinks = [
@@ -43,7 +64,6 @@ const HomePage = () => {
     { name: "Audience Reach", href: "#audience-reach" },
     { name: "Artist Network", href: "#artist-network" },
     { name: "Expertise", href: "#expertise" },
-    { name: "Audience Reach", href: "#audience-reach" },
   ];
 
   useEffect(() => {
@@ -73,42 +93,37 @@ const HomePage = () => {
       const rect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
+      // Check if section is in view
       const isInView = rect.top <= windowHeight && rect.bottom >= 0;
 
       if (isInView) {
-        setIsImageStackActive(true);
-
         const sectionHeight = section.offsetHeight;
+        // Adjust scroll progress to ensure first image is selected at top
         const scrollProgress = Math.max(
           0,
-          Math.min(
-            1,
-            (windowHeight - rect.top) / (sectionHeight + windowHeight)
-          )
+          Math.min(1, -rect.top / (sectionHeight - windowHeight))
         );
 
-        const imageProgress = scrollProgress * collegeImages.length;
+        // Map scroll progress to image index
         const newImageIndex = Math.min(
           collegeImages.length - 1,
-          Math.floor(imageProgress)
+          Math.floor(scrollProgress * collegeImages.length)
         );
 
-        if (newImageIndex !== currentImageIndex) {
-          setCurrentImageIndex(newImageIndex);
-        }
-      } else {
-        setIsImageStackActive(false);
+        setCurrentImageIndex(newImageIndex);
+      } else if (rect.top > windowHeight) {
+        // Ensure first image is shown when section is above viewport
+        setCurrentImageIndex(0);
       }
     };
 
-    const throttledHandleScroll = throttle(handleScroll, 100);
+    const throttledHandleScroll = throttle(handleScroll, 50);
     window.addEventListener("scroll", throttledHandleScroll);
 
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
-      document.body.style.overflow = "auto";
     };
-  }, [currentImageIndex, collegeImages.length]);
+  }, [collegeImages.length]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -160,7 +175,7 @@ const HomePage = () => {
         />
         <MusicFestivalsSection />
         <CollaborationsSection />
-        <ArtistNetworkSection/>
+        <ArtistNetworkSection />
         <ExpertiseSection />
         <Footer />
       </div>
