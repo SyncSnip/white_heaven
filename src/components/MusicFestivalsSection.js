@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import {SectionHeader} from "./SectionHeader";
 import Image from "next/image";
+import { SectionHeader } from "./SectionHeader";
 
 export const MusicFestivalsSection = () => {
   const sectionVariants = {
@@ -55,8 +55,8 @@ export const MusicFestivalsSection = () => {
                 Featured Event
               </h3>
               <p className="text-gray-600 italic">
-                "The production quality and artist lineup for our annual EDM
-                festival exceeded all expectations."
+                &quot;The production quality and artist lineup for our annual
+                EDM festival exceeded all expectations.&quot;
               </p>
               <p className="text-gray-500 text-sm mt-2">
                 - Sunburn Festival Team

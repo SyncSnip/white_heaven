@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import {SectionHeader} from "./SectionHeader";
 import Image from "next/image";
+import { SectionHeader } from "./SectionHeader";
 
 export const CollaborationsSection = () => {
   const sectionVariants = {
@@ -74,9 +74,9 @@ export const CollaborationsSection = () => {
             Success Stories
           </h3>
           <p className="text-gray-600 text-center">
-            "Working with White Heaven elevated our brand presence at college
+            &quot;Working with White Heaven elevated our brand presence at college
             festivals nationwide. Their understanding of youth culture is
-            unmatched."
+            unmatched.&quot;
           </p>
           <p className="text-gray-500 text-sm mt-4 text-center">
             - Red Bull Marketing Team

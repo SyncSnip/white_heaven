@@ -56,7 +56,6 @@ export const AboutSection = () => {
               and more — working with top-tier talent to craft unforgettable
               audience experiences.
             </p>
-
             <p>
               Whether it&apos;s a{" "}
               <span className="text-black font-medium">headline concert</span>,
@@ -67,6 +66,7 @@ export const AboutSection = () => {
               , or a stunning{" "}
               <span className="text-black font-medium">visual production</span>,
               we create moments that echo long after the lights fade.
+
             </p>
           </div>
         </div>
