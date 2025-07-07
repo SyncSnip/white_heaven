@@ -38,7 +38,7 @@ export const AboutSection = () => {
               experiences tailored for every audience and moment.
             </p>
             <p className="text-slate-600">
-              Whether it's a headline concert, a multi-genre festival, or a
+              Whether it&apos;s a headline concert, a multi-genre festival, or a
               visual production that lights up the night, we design moments that
               echo long after the lights go down.
             </p>

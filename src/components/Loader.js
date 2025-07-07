@@ -1,6 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export const Loader = () => {
   const [progress, setProgress] = useState(0);
@@ -87,10 +88,13 @@ export const Loader = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
-          <img
+          <Image
             src="/logoWhiteHeaven.png"
             className="h-16 md:h-20" // Much larger logo
             alt="White Heaven Logo"
+            width={80}
+            height={80}
+            priority
           />
         </motion.div>
 

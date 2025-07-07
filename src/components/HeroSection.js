@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export const HeroSection = () => {
   return (
@@ -22,8 +21,8 @@ export const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          India's premier show architects — from campus arenas to mega stages,
-          we bring experiences to life.
+          India&apos;s premier show architects — from campus arenas to mega
+          stages, we bring experiences to life.
         </motion.p>
       </div>
     </section>
