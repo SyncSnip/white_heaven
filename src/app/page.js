@@ -8,10 +8,6 @@ import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/About";
 import { ServicesSection } from "@/components/ServicesSection";
 import { CollegeFestivalsSection } from "@/components/CollegeFestivalsSection";
-import { MusicFestivalsSection } from "@/components/MusicFestivalsSection";
-import { CollaborationsSection } from "@/components/CollaborationsSection";
-import { ArtistNetworkSection } from "@/components/ArtistNetworkSection";
-import { ExpertiseSection } from "@/components/ExpertiseSection";
 import { Footer } from "@/components/Footer";
 import { ArtistBooking } from "@/components/ArtistBookings";
 import { GetInTouch } from "@/components/GetInTouch";
@@ -22,12 +18,23 @@ const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
   const [collegeFestivalsIndex, setCollegeFestivalsIndex] = useState(0);
-  const [artistBookingIndexBollywood, setArtistBookingIndexBollywood] = useState(0);
+  const [artistBookingIndexBollywood, setArtistBookingIndexBollywood] =
+    useState(0);
   const [artistBookingIndexDj, setArtistBookingIndexDj] = useState(0);
   const [artistBookingIndexComedy, setArtistBookingIndexComedy] = useState(0);
   const [artistBookingIndexBands, setArtistBookingIndexBands] = useState(0);
-  const [artistBookingIndexSpokenArt, setArtistBookingIndexSpokenArt] = useState(0);
-  const [artistBookingIndexSingerSongwriters, setArtistBookingIndexSingerSongwriters] = useState(0);
+  const [artistBookingIndexSpokenArt, setArtistBookingIndexSpokenArt] =
+    useState(0);
+  const [
+    artistBookingIndexSingerSongwriters,
+    setArtistBookingIndexSingerSongwriters,
+  ] = useState(0);
+  const [
+    artistBookingIndexEventProduction,
+    setArtistBookingIndexEventProduction,
+  ] = useState(0);
+  const [artistBookingIndexMusicFestival, setArtistBookingIndexMusicFestival] =
+    useState(0);
 
   const collegeFestivalsRef = useRef(null);
   const artistBookingBollywoodRef = useRef(null);
@@ -36,84 +43,138 @@ const HomePage = () => {
   const artistBookingBandsRef = useRef(null);
   const artistBookingSpokenArtRef = useRef(null);
   const artistBookingSingerSongwritersRef = useRef(null);
+  const artistBookingEventProductionRef = useRef(null);
+  const artistBookingMusicFestivalRef = useRef(null);
 
   const collegeImages = [
     { src: "/collegefestival1.jpg", title: "Dhruva - IIM Trichy" },
     { src: "/collegefestival2.jpg", title: "GL Bajaj - Mohan Sisters 1" },
     { src: "/collegefestival3.jpg", title: "Kshitij - IIT Kharagpur - Krsna" },
-    { src: "/collegefestival4.jpg", title: "Pravega - IISC Bangalore - Amit Trivedi" },
-    { src: "/collegefestival5.jpg", title: "Blithchron - IIT GandhiNagar - Antara Mitra" },
-    { src: "/collegefestival6.jpg", title: "Rhapsody - IISC Bangalore - Shreya Ghoshal 4" },
+    {
+      src: "/collegefestival4.jpg",
+      title: "Pravega - IISC Bangalore - Amit Trivedi",
+    },
+    {
+      src: "/collegefestival5.jpg",
+      title: "Blithchron - IIT GandhiNagar - Antara Mitra",
+    },
+    {
+      src: "/collegefestival6.jpg",
+      title: "Rhapsody - IISC Bangalore - Shreya Ghoshal 4",
+    },
     { src: "/collegefestival7.JPEG", title: "GL Bajaj - Shreya Ghoshal" },
   ];
 
   const artistImagesBollywood = [
-    { src: "/artist1.jpg", title: "Artist - Arijit Singh" },
-    { src: "/artist2.jpg", title: "Artist - AR Rahman" },
-    { src: "/artist3.jpg", title: "Artist - Anuv Jain" },
-    { src: "/artist4.jpg", title: "Artist - Diljit Dosanjh" },
+    {
+      src: "/artistBooking/artistbookingbollywood1.jpg",
+      title: "BITS Hyderabad - Sunidhi Chauhan",
+    },
+    {
+      src: "/artistBooking/artistbookingbollywood2.jpg",
+      title: "BITS Hyderabad - Shilpa Rao",
+    },
+    {
+      src: "/artistBooking/artistbookingbollywood3.jpg",
+      title: "IISC Bangalore - Shreya Ghoshal",
+    },
+    {
+      src: "/artistBooking/artistbookingbollywood4.jpg",
+      title: "Mohit Chauhan",
+    },
+    {
+      src: "/artistBooking/artistbookingbollywood6.jpg",
+      title: "Farhan Akhtar.HEIC",
+    },
   ];
 
   const artistImagesDj = [
-    { src: "/dj1.jpg", title: "DJ - Artist 1" },
-    { src: "/dj2.jpg", title: "DJ - Artist 2" },
-    { src: "/dj3.jpg", title: "DJ - Artist 3" },
-    { src: "/dj4.jpg", title: "DJ - Artist 4" },
+    { src: "/artistBooking/dj1.jpg" },
+    { src: "/artistBooking/dj2.jpg" },
+    { src: "/artistBooking/dj3.jpg" },
+    { src: "/artistBooking/dj4.jpg" },
   ];
 
   const artistImagesComedy = [
-    { src: "/comedy1.jpg", title: "Comedian - Artist 1" },
-    { src: "/comedy2.jpg", title: "Comedian - Artist 2" },
-    { src: "/comedy3.jpg", title: "Comedian - Artist 3" },
-    { src: "/comedy4.jpg", title: "Comedian - Artist 4" },
-    { src: "/comedy5.jpg", title: "Comedian - Artist 5" },
+    { src: "/artistBooking/comedy1.jpg", title: "Jaspreet Singh" },
+    { src: "/artistBooking/comedy2.jpg", title: "Madhur Virli" },
+    { src: "/artistBooking/comedy3.jpg", title: "Kullubaazi" },
+    { src: "/artistBooking/comedy4.jpg", title: "IIM Trichy - Ravi Gupta" },
   ];
 
   const artistImagesBands = [
-    { src: "/band1.jpg", title: "Band - Artist 1" },
-    { src: "/band2.jpg", title: "Band - Artist 2" },
-    { src: "/band3.jpg", title: "Band - Artist 3" },
-    { src: "/band4.jpg", title: "Band - Artist 4" },
-    { src: "/band5.jpg", title: "Band - Artist 5" },
+    { src: "/artistBooking/band1.jpg", title: "TRDP" },
+    { src: "/artistBooking/band2.jpg", title: "Indian Ocean" },
+    {
+      src: "/artistBooking/band3.jpg",
+      title: "(Bands) - As We Keep Searching1",
+    },
+    { src: "/artistBooking/band4.jpg", title: "TRAP" },
+    { src: "/artistBooking/band5.jpg", title: "Agnee" },
   ];
 
-  const artistImagesSpokenArt = [
-    { src: "/spokenart1.jpg", title: "Spoken Art - Artist 1" },
-    { src: "/spokenart2.jpg", title: "Spoken Art - Artist 2" },
-    { src: "/spokenart3.jpg", title: "Spoken Art - Artist 3" },
-  ];
+  const artistImagesSpokenArt = [{ src: "/artistBooking/spokenart.jpg" }];
 
   const artistImagesSingerSongwriters = [
-    { src: "/singersongwriter1.jpg", title: "Singer-Songwriter - Artist 1" },
-    { src: "/singersongwriter2.jpg", title: "Singer-Songwriter - Artist 2" },
-    { src: "/singersongwriter3.jpg", title: "Singer-Songwriter - Artist 3" },
-    { src: "/singersongwriter4.jpg", title: "Singer-Songwriter - Artist 4" },
-    { src: "/singersongwriter5.jpg", title: "Singer-Songwriter - Artist 5" },
+    { src: "/artistBooking/singer1.jpg", title: "Anuv Jain" },
+    { src: "/artistBooking/singer2.jpg", title: "Piyush Bhisekar" },
   ];
 
-const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services Offered", href: "#services" },
-  { name: "College Festivals", href: "#college-festivals" },
-  {
-    name: "Artist Booking",
-    href: "#artist-booking-bollywood",
-    subLinks: [
-      { name: "Bollywood", href: "#artist-booking-bollywood" },
-      { name: "DJ", href: "#artist-booking-dj" },
-      { name: "Comedy", href: "#artist-booking-comedy" },
-      { name: "Bands", href: "#artist-booking-bands" },
-      { name: "Spoken Art", href: "#artist-booking-spoken-art" },
-      { name: "Singer-Songwriters", href: "#artist-booking-singer-songwriters" },
-    ],
-  },
-  { name: "Music Festivals", href: "#music-festivals" },
-  { name: "Collaborations", href: "#collaborations" },
-  { name: "Audience Reach", href: "#audience-reach" },
-  { name: "Artist Network", href: "#artist-network" },
-  { name: "Expertise", href: "#expertise" },
-];
+  const artistImagesEventProduction = [
+    {
+      src: "/artistBooking/eventproduction1.jpg",
+      title: "GL Bajaj - Mohan Sister",
+    },
+    {
+      src: "/artistBooking/eventproduction2.jpg",
+      title: "IISC Bangalore - Shreya Ghoshal 2",
+    },
+    {
+      src: "/artistBooking/eventproduction3.jpg",
+      title: "(Production) - Salim Sulaiman",
+    },
+    {
+      src: "/artistBooking/eventproduction4.JPEG",
+      title: "GL Bajaj - Shreya Ghoshal ",
+    },
+    {
+      src: "/artistBooking/eventproduction5.JPEG",
+      title: "GL Bajaj - Shreya Ghoshal",
+    },
+    {
+      src: "/artistBooking/eventproduction6.JPEG",
+      title: "GL Bajaj - Mohan Sisters",
+    },
+  ];
+
+  const artistImagesMusicFestival = [
+    { src: "/artistBooking/musicfestival1.jpg" },
+    { src: "/artistBooking/musicfestival2.jpg" },
+    { src: "/artistBooking/musicfestival3.jpg" },
+    { src: "/artistBooking/musicfestival4.jpg" },
+    { src: "/artistBooking/musicfestival5.jpg" },
+    { src: "/artistBooking/musicfestival6.jpg" },
+    { src: "/artistBooking/musicfestival7.jpg" },
+    { src: "/artistBooking/musicfestival8.jpg" },
+  ];
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Services Offered", href: "#services" },
+    {
+      name: "Artist Booking",
+      href: "#artist-booking-bollywood",
+      subLinks: [
+        { name: "College Festivals", href: "#college-festivals" },
+        { name: "Artist Booking", href: "#artistbooking" },
+        { name: "Event Production", href: "#eventproduction" },
+        { name: "Music Festival", href: "#music-festivals" },
+      ],
+    },
+    { name: "Lets's Get In Touch", href: "#get-in-touch" },
+  ];
+
   useEffect(() => {
     const throttle = (func, limit) => {
       let lastFunc;
@@ -290,6 +351,50 @@ const navLinks = [
           setArtistBookingIndexSingerSongwriters(0);
         }
       }
+
+      // Handle ArtistBooking Event Production
+      if (artistBookingEventProductionRef.current) {
+        const section = artistBookingEventProductionRef.current;
+        const rect = section.getBoundingClientRect();
+        const isInView = rect.top <= windowHeight && rect.bottom >= 0;
+
+        if (isInView && window.innerWidth >= 768) {
+          const sectionHeight = section.offsetHeight;
+          const scrollProgress = Math.max(
+            0,
+            Math.min(1, -rect.top / (sectionHeight - windowHeight))
+          );
+          const newImageIndex = Math.min(
+            artistImagesEventProduction.length - 1,
+            Math.floor(scrollProgress * artistImagesEventProduction.length)
+          );
+          setArtistBookingIndexEventProduction(newImageIndex);
+        } else if (rect.top > windowHeight) {
+          setArtistBookingIndexEventProduction(0);
+        }
+      }
+
+      // Handle ArtistBooking Music Festival
+      if (artistBookingMusicFestivalRef.current) {
+        const section = artistBookingMusicFestivalRef.current;
+        const rect = section.getBoundingClientRect();
+        const isInView = rect.top <= windowHeight && rect.bottom >= 0;
+
+        if (isInView && window.innerWidth >= 768) {
+          const sectionHeight = section.offsetHeight;
+          const scrollProgress = Math.max(
+            0,
+            Math.min(1, -rect.top / (sectionHeight - windowHeight))
+          );
+          const newImageIndex = Math.min(
+            artistImagesMusicFestival.length - 1,
+            Math.floor(scrollProgress * artistImagesMusicFestival.length)
+          );
+          setArtistBookingIndexMusicFestival(newImageIndex);
+        } else if (rect.top > windowHeight) {
+          setArtistBookingIndexMusicFestival(0);
+        }
+      }
     };
 
     const throttledHandleScroll = throttle(handleScroll, 50);
@@ -306,6 +411,8 @@ const navLinks = [
     artistImagesBands.length,
     artistImagesSpokenArt.length,
     artistImagesSingerSongwriters.length,
+    artistImagesEventProduction.length,
+    artistImagesMusicFestival.length,
   ]);
 
   useEffect(() => {
@@ -357,70 +464,98 @@ const navLinks = [
           currentImageIndex={collegeFestivalsIndex}
           setCurrentImageIndex={setCollegeFestivalsIndex}
         />
-        <ArtistBooking
-          sectionRef={artistBookingBollywoodRef}
-          id="artist-booking-bollywood"
-          Topic="Bollywood Artists"
-          Description="Feel the magic of the mainstream with Bollywood’s biggest voices — from soulful serenades to high-energy hits, we bring the stars that make you dance, sing, and scream with joy."
-          images={artistImagesBollywood}
-          currentImageIndex={artistBookingIndexBollywood}
-          setCurrentImageIndex={setArtistBookingIndexBollywood}
-          imagePositionType={2}
-        />
-        <ArtistBooking
-          sectionRef={artistBookingDjRef}
-          id="artist-booking-dj"
-          Topic="DJ"
-          Description="Turn the volume up and the lights down — whether it's EDM, commercial, or desi beats, our DJs know exactly how to keep the crowd on its feet till sunrise."
-          images={artistImagesDj}
-          currentImageIndex={artistBookingIndexDj}
-          setCurrentImageIndex={setArtistBookingIndexDj}
-          imagePositionType={1}
-        />
-        <ArtistBooking
-          sectionRef={artistBookingComedyRef}
-          id="artist-booking-comedy"
-          Topic="Comedy"
-          Description="Tired of lectures and lab reports? India’s top comics are here to turn your fest into a laugh riot. Wit, roast, or relatable chaos — we’ve got it all."
-          images={artistImagesComedy}
-          currentImageIndex={artistBookingIndexComedy}
-          setCurrentImageIndex={setArtistBookingIndexComedy}
-          imagePositionType={1}
-        />
-        <ArtistBooking
-          sectionRef={artistBookingBandsRef}
-          id="artist-booking-bands"
-          Topic="Bands"
-          Description="If you're craving something real, raw, and ridiculously good — India’s freshest indie bands will hit you with tunes that feel both new and nostalgic."
-          images={artistImagesBands}
-          currentImageIndex={artistBookingIndexBands}
-          setCurrentImageIndex={setArtistBookingIndexBands}
-          imagePositionType={2}
-        />
-        <ArtistBooking
-          sectionRef={artistBookingSpokenArtRef}
-          id="artist-booking-spoken-art"
-          Topic="Spoken Art"
-          Description="Not into loud beats? We’ve got artists who speak to your soul. From poetry to storytelling, experience performances that stay with you long after the mic drops."
-          images={artistImagesSpokenArt}
-          currentImageIndex={artistBookingIndexSpokenArt}
-          setCurrentImageIndex={setArtistBookingIndexSpokenArt}
-          imagePositionType={1}
-        />
-        <ArtistBooking
-          sectionRef={artistBookingSingerSongwritersRef}
-          id="artist-booking-singer-songwriters"
-          Topic="Singer-Songwriters"
-          Description="Stripped-down sets, honest lyrics, and pure vibes. Perfect for evenings that call for quiet magic and a crowd that listens."
-          images={artistImagesSingerSongwriters}
-          currentImageIndex={artistBookingIndexSingerSongwriters}
-          setCurrentImageIndex={setArtistBookingIndexSingerSongwriters}
-          imagePositionType={2}
-        />
-        <MusicFestivalsSection />
-        <CollaborationsSection />
-        <ArtistNetworkSection />
-        <ExpertiseSection />
+        <div id="artistbooking">
+          <ArtistBooking
+            sectionRef={artistBookingBollywoodRef}
+            id="artist-booking-bollywood"
+            Topic="Bollywood Artists"
+            Description="Feel the magic of the mainstream with Bollywood’s biggest voices — from soulful serenades to high-energy hits, we bring the stars that make you dance, sing, and scream with joy."
+            images={artistImagesBollywood}
+            currentImageIndex={artistBookingIndexBollywood}
+            setCurrentImageIndex={setArtistBookingIndexBollywood}
+            imagePositionType={2}
+            showSideTitle={true}
+          />
+          <ArtistBooking
+            sectionRef={artistBookingDjRef}
+            id="artist-booking-dj"
+            Topic="DJ"
+            Description="Turn the volume up and the lights down — whether it's EDM, commercial, or desi beats, our DJs know exactly how to keep the crowd on its feet till sunrise."
+            images={artistImagesDj}
+            currentImageIndex={artistBookingIndexDj}
+            setCurrentImageIndex={setArtistBookingIndexDj}
+            imagePositionType={1}
+            showSideTitle={true}
+          />
+          <ArtistBooking
+            sectionRef={artistBookingComedyRef}
+            id="artist-booking-comedy"
+            Topic="Comedy"
+            Description="Tired of lectures and lab reports? India’s top comics are here to turn your fest into a laugh riot. Wit, roast, or relatable chaos — we’ve got it all."
+            images={artistImagesComedy}
+            currentImageIndex={artistBookingIndexComedy}
+            setCurrentImageIndex={setArtistBookingIndexComedy}
+            imagePositionType={2}
+            showSideTitle={true}
+          />
+          <ArtistBooking
+            sectionRef={artistBookingBandsRef}
+            id="artist-booking-bands"
+            Topic="Bands"
+            Description="If you're craving something real, raw, and ridiculously good — India’s freshest indie bands will hit you with tunes that feel both new and nostalgic."
+            images={artistImagesBands}
+            currentImageIndex={artistBookingIndexBands}
+            setCurrentImageIndex={setArtistBookingIndexBands}
+            imagePositionType={1}
+            showSideTitle={true}
+          />
+          <ArtistBooking
+            sectionRef={artistBookingSpokenArtRef}
+            id="artist-booking-spoken-art"
+            Topic="Spoken Art"
+            Description="Not into loud beats? We’ve got artists who speak to your soul. From poetry to storytelling, experience performances that stay with you long after the mic drops."
+            images={artistImagesSpokenArt}
+            currentImageIndex={artistBookingIndexSpokenArt}
+            setCurrentImageIndex={setArtistBookingIndexSpokenArt}
+            imagePositionType={2}
+            showSideTitle={true}
+          />
+          <ArtistBooking
+            sectionRef={artistBookingSingerSongwritersRef}
+            id="artist-booking-singer-songwriters"
+            Topic="Singer-Songwriters"
+            Description="Stripped-down sets, honest lyrics, and pure vibes. Perfect for evenings that call for quiet magic and a crowd that listens."
+            images={artistImagesSingerSongwriters}
+            currentImageIndex={artistBookingIndexSingerSongwriters}
+            setCurrentImageIndex={setArtistBookingIndexSingerSongwriters}
+            imagePositionType={1}
+            showSideTitle={true}
+          />
+        </div>
+        <div id="eventproduction">
+          <ArtistBooking
+            sectionRef={artistBookingEventProductionRef}
+            id="artist-booking-event-production"
+            Topic="Event Production"
+            Description="From stunning stage designs to flawless sound and lighting, our event production team crafts unforgettable experiences tailored to your vision."
+            images={artistImagesEventProduction}
+            currentImageIndex={artistBookingIndexEventProduction}
+            setCurrentImageIndex={setArtistBookingIndexEventProduction}
+            imagePositionType={2}
+          />
+        </div>
+        <div id="music-festivals">
+          <ArtistBooking
+            sectionRef={artistBookingMusicFestivalRef}
+            id="artist-booking-music-festival"
+            Topic="Music Festival"
+            Description="Curate epic music festivals with our expertise in booking top-tier artists and creating vibrant, crowd-pulling events that resonate with music lovers."
+            images={artistImagesMusicFestival}
+            currentImageIndex={artistBookingIndexMusicFestival}
+            setCurrentImageIndex={setArtistBookingIndexMusicFestival}
+            imagePositionType={1}
+          />
+        </div>
         <GetInTouch />
         <Footer />
       </div>

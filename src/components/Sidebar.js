@@ -55,15 +55,15 @@ export const Sidebar = ({ isMenuOpen, openMenu, scrollToSection, navLinks }) => 
                     }
                     className="flex items-center space-x-4"
                   >
-                    <span className="py-2.5 px-4 rounded-full text-xs text-gray-700 opacity-35">
+                    {/* <span className="py-2.5 px-4 rounded-full text-xs text-gray-700 opacity-35">
                       {i < 9 ? `0${i + 1}` : i + 1}
-                    </span>
+                    </span> */}
                     <span className="md:text-xl text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
                       {link.name}
                     </span>
                     {link.subLinks && (
                       <svg
-                        className={`h-5 w-5 transform transition-transform ${
+                        className={`h-5 w-5 transform transition-transform cursor-pointer ${
                           openDropdown === link.name ? "rotate-180" : ""
                         }`}
                         fill="none"
@@ -97,9 +97,9 @@ export const Sidebar = ({ isMenuOpen, openMenu, scrollToSection, navLinks }) => 
                               onClick={() => scrollToSection(subLink.href.substring(1))}
                               className="flex items-center space-x-4"
                             >
-                              <span className="py-1.5 px-3 rounded-full text-xs text-gray-700 opacity-35">
+                              {/* <span className="py-1.5 px-3 rounded-full text-xs text-gray-700 opacity-35">
                                 {i < 9 ? `0${i + 1}.${subIndex + 1}` : `${i + 1}.${subIndex + 1}`}
-                              </span>
+                              </span> */}
                               <span className="text-md font-medium hover:text-gray-300 transition-colors cursor-pointer">
                                 {subLink.name}
                               </span>

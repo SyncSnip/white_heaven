@@ -27,11 +27,12 @@ export const ContentPanel = ({ isContentOpen }) => {
         >
           <div className="flex flex-col items-center justify-center h-full p-6">
             <Image
-              width={100}
-              height={100}
-              src="/logoWhiteHeaven.png"
-              className="w-[50%] h-auto"
+              src="/whe.png"
               alt="Logo"
+              width={400} // try larger value
+              height={400}
+              className="w-[50%] h-auto"
+              priority
             />
           </div>
         </motion.div>
