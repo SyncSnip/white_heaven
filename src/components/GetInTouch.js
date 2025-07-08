@@ -80,7 +80,13 @@ export const GetInTouch = () => {
           className="text-2xl md:text-4xl font-extrabold text-gray-800 leading-relaxed mb-10 tracking-tight"
           variants={childVariants}
         >
-          “No idea is too wild. No brief is too bold. Let’s connect and create.”
+          “No idea is too wild. No brief is too bold.”
+        </motion.p>
+        <motion.p
+          className="text-2xl md:text-4xl font-extrabold text-gray-800 leading-relaxed mb-10 tracking-tight"
+          variants={childVariants}
+        >
+          “Let’s connect and create.”
         </motion.p>
 
         <motion.a

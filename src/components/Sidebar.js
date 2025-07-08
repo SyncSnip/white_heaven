@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 export const Sidebar = ({ isMenuOpen, openMenu, scrollToSection, navLinks }) => {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState(true);
 
   const menuVariants = {
     closed: {
@@ -29,9 +29,9 @@ export const Sidebar = ({ isMenuOpen, openMenu, scrollToSection, navLinks }) => 
     open: { height: "auto", opacity: 1, transition: { duration: 0.3 } },
   };
 
-  const toggleDropdown = (linkName) => {
-    setOpenDropdown(openDropdown === linkName ? null : linkName);
-  };
+  // const toggleDropdown = (linkName) => {
+  //   setOpenDropdown(openDropdown === linkName ? null : linkName);
+  // };
 
   return (
     <AnimatePresence>
@@ -48,10 +48,7 @@ export const Sidebar = ({ isMenuOpen, openMenu, scrollToSection, navLinks }) => 
               <motion.div key={link.name} variants={linkVariants}>
                 <div className="flex flex-col">
                   <button
-                    onClick={() =>
-                      link.subLinks
-                        ? toggleDropdown(link.name)
-                        : scrollToSection(link.href.substring(1))
+                    onClick={() => scrollToSection(link.href.substring(1))
                     }
                     className="flex items-center space-x-4"
                   >
@@ -59,30 +56,16 @@ export const Sidebar = ({ isMenuOpen, openMenu, scrollToSection, navLinks }) => 
                       {i < 9 ? `0${i + 1}` : i + 1}
                     </span> */}
                     <span className="md:text-xl text-lg font-semibold hover:text-gray-300 transition-colors cursor-pointer">
-                      {link.name}
+                      {link.name}  {" "}
+                      {
+                        link.name === "What Do We Do" && " ?"
+                      }
                     </span>
-                    {link.subLinks && (
-                      <svg
-                        className={`h-5 w-5 transform transition-transform cursor-pointer ${
-                          openDropdown === link.name ? "rotate-180" : ""
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M19 9l-7 7-7-7"
-                        />
-                      </svg>
-                    )}
+                   
                   </button>
                   {link.subLinks && (
                     <AnimatePresence>
-                      {openDropdown === link.name && (
+                      (
                         <motion.div
                           className="ml-12 mt-2 space-y-2"
                           variants={dropdownVariants}
@@ -106,7 +89,7 @@ export const Sidebar = ({ isMenuOpen, openMenu, scrollToSection, navLinks }) => 
                             </motion.button>
                           ))}
                         </motion.div>
-                      )}
+                      
                     </AnimatePresence>
                   )}
                 </div>

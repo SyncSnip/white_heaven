@@ -47,45 +47,21 @@ const HomePage = () => {
   const artistBookingMusicFestivalRef = useRef(null);
 
   const collegeImages = [
-    { src: "/collegefestival1.jpg", title: "Dhruva - IIM Trichy" },
-    { src: "/collegefestival2.jpg", title: "GL Bajaj - Mohan Sisters 1" },
-    { src: "/collegefestival3.jpg", title: "Kshitij - IIT Kharagpur - Krsna" },
-    {
-      src: "/collegefestival4.jpg",
-      title: "Pravega - IISC Bangalore - Amit Trivedi",
-    },
-    {
-      src: "/collegefestival5.jpg",
-      title: "Blithchron - IIT GandhiNagar - Antara Mitra",
-    },
-    {
-      src: "/collegefestival6.jpg",
-      title: "Rhapsody - IISC Bangalore - Shreya Ghoshal 4",
-    },
-    { src: "/collegefestival7.JPEG", title: "GL Bajaj - Shreya Ghoshal" },
+    { src: "/collegefestival1.jpg", title: "IIM Trichy - Dhruva" },
+    { src: "/collegefestival2.jpg", title: "GL Bajaj - Mohan Sisters" },
+    { src: "/collegefestival3.jpg", title: "IIT Kharagpur - Kshitij" },
+    { src: "/collegefestival4.jpg", title: "IISC Bangalore - Pravega" },
+    { src: "/collegefestival5.jpg", title: "IIT GandhiNagar - Blithchron" },
+    { src: "/collegefestival6.jpg", title: "IISC Bangalore - Rhapsody" },
+    { src: "/collegefestival7.JPEG", title: "GL Bajaj" },
   ];
 
   const artistImagesBollywood = [
-    {
-      src: "/artistBooking/artistbookingbollywood1.jpg",
-      title: "BITS Hyderabad - Sunidhi Chauhan",
-    },
-    {
-      src: "/artistBooking/artistbookingbollywood2.jpg",
-      title: "BITS Hyderabad - Shilpa Rao",
-    },
-    {
-      src: "/artistBooking/artistbookingbollywood3.jpg",
-      title: "IISC Bangalore - Shreya Ghoshal",
-    },
-    {
-      src: "/artistBooking/artistbookingbollywood4.jpg",
-      title: "Mohit Chauhan",
-    },
-    {
-      src: "/artistBooking/artistbookingbollywood6.jpg",
-      title: "Farhan Akhtar.HEIC",
-    },
+    { src: "/artistBooking/artistbookingbollywood1.jpg" },
+    { src: "/artistBooking/artistbookingbollywood2.jpg" },
+    { src: "/artistBooking/artistbookingbollywood3.jpg" },
+    { src: "/artistBooking/artistbookingbollywood4.jpg" },
+    { src: "/artistBooking/artistbookingbollywood6.jpg" },
   ];
 
   const artistImagesDj = [
@@ -96,55 +72,37 @@ const HomePage = () => {
   ];
 
   const artistImagesComedy = [
-    { src: "/artistBooking/comedy1.jpg", title: "Jaspreet Singh" },
-    { src: "/artistBooking/comedy2.jpg", title: "Madhur Virli" },
-    { src: "/artistBooking/comedy3.jpg", title: "Kullubaazi" },
-    { src: "/artistBooking/comedy4.jpg", title: "IIM Trichy - Ravi Gupta" },
+    { src: "/artistBooking/comedy1.jpg" },
+    { src: "/artistBooking/comedy2.jpg" },
+    { src: "/artistBooking/comedy3.jpg" },
+    { src: "/artistBooking/comedy4.jpg" },
   ];
 
   const artistImagesBands = [
-    { src: "/artistBooking/band1.jpg", title: "TRDP" },
-    { src: "/artistBooking/band2.jpg", title: "Indian Ocean" },
+    { src: "/artistBooking/band1.jpg" },
+    { src: "/artistBooking/band2.jpg" },
     {
       src: "/artistBooking/band3.jpg",
       title: "(Bands) - As We Keep Searching1",
     },
-    { src: "/artistBooking/band4.jpg", title: "TRAP" },
-    { src: "/artistBooking/band5.jpg", title: "Agnee" },
+    { src: "/artistBooking/band4.jpg" },
+    { src: "/artistBooking/band5.jpg" },
   ];
 
   const artistImagesSpokenArt = [{ src: "/artistBooking/spokenart.jpg" }];
 
   const artistImagesSingerSongwriters = [
-    { src: "/artistBooking/singer1.jpg", title: "Anuv Jain" },
-    { src: "/artistBooking/singer2.jpg", title: "Piyush Bhisekar" },
+    { src: "/artistBooking/singer1.jpg" },
+    { src: "/artistBooking/singer2.jpg" },
   ];
 
   const artistImagesEventProduction = [
-    {
-      src: "/artistBooking/eventproduction1.jpg",
-      title: "GL Bajaj - Mohan Sister",
-    },
-    {
-      src: "/artistBooking/eventproduction2.jpg",
-      title: "IISC Bangalore - Shreya Ghoshal 2",
-    },
-    {
-      src: "/artistBooking/eventproduction3.jpg",
-      title: "(Production) - Salim Sulaiman",
-    },
-    {
-      src: "/artistBooking/eventproduction4.JPEG",
-      title: "GL Bajaj - Shreya Ghoshal ",
-    },
-    {
-      src: "/artistBooking/eventproduction5.JPEG",
-      title: "GL Bajaj - Shreya Ghoshal",
-    },
-    {
-      src: "/artistBooking/eventproduction6.JPEG",
-      title: "GL Bajaj - Mohan Sisters",
-    },
+    { src: "/artistBooking/eventproduction1.jpg" },
+    { src: "/artistBooking/eventproduction2.jpg" },
+    { src: "/artistBooking/eventproduction3.jpg" },
+    { src: "/artistBooking/eventproduction4.JPEG" },
+    { src: "/artistBooking/eventproduction5.JPEG" },
+    { src: "/artistBooking/eventproduction6.JPEG" },
   ];
 
   const artistImagesMusicFestival = [
@@ -163,8 +121,8 @@ const HomePage = () => {
     { name: "About", href: "#about" },
     { name: "Services Offered", href: "#services" },
     {
-      name: "Artist Booking",
-      href: "#artist-booking-bollywood",
+      name: "What Do We Do?",
+      href: "#what-do-we-do",
       subLinks: [
         { name: "College Festivals", href: "#college-festivals" },
         { name: "Artist Booking", href: "#artistbooking" },
@@ -174,7 +132,6 @@ const HomePage = () => {
     },
     { name: "Lets's Get In Touch", href: "#get-in-touch" },
   ];
-
   useEffect(() => {
     const throttle = (func, limit) => {
       let lastFunc;

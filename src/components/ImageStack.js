@@ -197,7 +197,7 @@ export const ImageStack = ({ collegeImages, currentImageIndex, isMobile, setCurr
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" /> */}
               {index === currentImageIndex &&  image?.title && (
                 <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-xl p-4 sm:p-5 rounded-xl shadow-xl">
                   <h3 className="text-lg sm:text-xl font-semibold text-white drop-shadow-md text-center">

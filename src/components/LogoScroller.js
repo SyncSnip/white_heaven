@@ -98,11 +98,12 @@ export const LogoScroller = () => {
             key={index}
             className="relative h-full w-[100px] flex-shrink-0 flex items-center justify-center"
           >
+            <div className="absolute inset-0 bg-gray-600/10 backdrop-blur-md rounded-lg border border-white/20 shadow-sm" />
             <Image
               src={logo}
               alt={`Logo ${index + 1}`}
               fill
-              className="object-contain"
+              className="object-contain relative z-10"
               priority={index < logos.length}
             />
           </div>
