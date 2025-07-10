@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "./SectionHeader";
 import { Card } from "./Card";
 
-export const ServicesSection = () => {
+export const ServicesSection = ({ scrollToSection }) => {
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -22,27 +22,31 @@ export const ServicesSection = () => {
       >
         <SectionHeader title="What Do We Do?" highlightColor="bg-green-300" />
         <div className="grid md:grid-cols-2 gap-8 w-full mt-6">
-          <Card
-            icon={
-              <svg
-                className="w-8 h-8 text-green-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-                />
-              </svg>
-            }
-            title="College Fests"
-            description="India's most influential campuses — IITs, IIMs, NITs and leading private universities."
-            highlightColor="green"
-          />
+          <div style={{ perspective: 1000 }}>
+            <Card
+              icon={
+                <svg
+                  className="w-8 h-8 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                  />
+                </svg>
+              }
+              link={"#college-festivals"}
+              scrollToSection={scrollToSection}
+              title="College Fests"
+              description="India's most influential campuses — IITs, IIMs, NITs and leading private universities."
+              highlightColor="green"
+            />
+          </div>
           <Card
             icon={
               <svg
@@ -60,6 +64,8 @@ export const ServicesSection = () => {
                 />
               </svg>
             }
+            link={"#artistbooking"}
+            scrollToSection={scrollToSection}
             title="Artist Bookings"
             description="From homegrown indie sensations and Bollywood stars to globally followed DJs, find the perfect artists to match your vibe and make your event a huge, unforgettable hit."
             highlightColor="green"
@@ -83,6 +89,8 @@ export const ServicesSection = () => {
                 />
               </svg>
             }
+            link={"#eventproduction"}
+            scrollToSection={scrollToSection}
             title="Event Production"
             description="From creative concepts to smooth execution, making sure your event truly stands out!"
             highlightColor="green"
@@ -105,6 +113,8 @@ export const ServicesSection = () => {
                 />
               </svg>
             }
+            link={"#music-festivals"}
+            scrollToSection={scrollToSection}
             title="Music Festivals"
             description="Epic nights filled with huge artists, good vibes, and pure musical magic!"
             highlightColor="green"
@@ -127,6 +137,7 @@ export const ServicesSection = () => {
                 />
               </svg>
             }
+            scrollToSection={scrollToSection}
             title="Corporate Events"
             description="Celebrate milestones, connect teams, and create lasting memories in a unique way!"
             highlightColor="green"

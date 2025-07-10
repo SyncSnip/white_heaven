@@ -414,7 +414,7 @@ const HomePage = () => {
         <ContentPanel isContentOpen={isContentOpen} />
         <HeroSection />
         <AboutSection />
-        <ServicesSection />
+        <ServicesSection scrollToSection={scrollToSection} />
         <CollegeFestivalsSection
           sectionRef={collegeFestivalsRef}
           collegeImages={collegeImages}
