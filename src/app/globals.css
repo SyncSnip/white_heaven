@@ -35,3 +35,10 @@
 .flip-card-back {
   transform: rotateY(180deg);
 }
+
+
+@media (max-width: 768px) {
+  .flip-card {
+    min-height: 400px; /* Shorter for mobile */
+  }
+}
