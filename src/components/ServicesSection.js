@@ -11,42 +11,40 @@ export const ServicesSection = ({ scrollToSection }) => {
   return (
     <section
       id="what-do-we-do"
-      className="min-h-screen flex items-center justify-center bg-[#f6f7f7] pb-20"
+      className="min-h-screen flex items-center justify-center bg-[#f6f7f7] py-12"
     >
       <motion.div
-        className="flex flex-col items-center justify-center h-full p-6 max-w-6xl mx-auto"
+        className="flex flex-col items-center justify-center w-full max-w-6xl mx-auto px-4 sm:px-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={sectionVariants}
       >
         <SectionHeader title="What Do We Do?" highlightColor="bg-green-300" />
-        <div className="grid md:grid-cols-2 gap-8 w-full mt-6">
-          <div style={{ perspective: 1000 }}>
-            <Card
-              icon={
-                <svg
-                  className="w-8 h-8 text-green-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-                  />
-                </svg>
-              }
-              link={"#college-festivals"}
-              scrollToSection={scrollToSection}
-              title="College Fests"
-              description="India's most influential campuses — IITs, IIMs, NITs and leading private universities."
-              highlightColor="green"
-            />
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-6">
+          <Card
+            icon={
+              <svg
+                className="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                />
+              </svg>
+            }
+            link="#college-festivals"
+            scrollToSection={scrollToSection}
+            title="College Fests"
+            description="India's most influential campuses — IITs, IIMs, NITs and leading private universities."
+            highlightColor="green"
+          />
           <Card
             icon={
               <svg
@@ -64,14 +62,14 @@ export const ServicesSection = ({ scrollToSection }) => {
                 />
               </svg>
             }
-            link={"#artistbooking"}
+            link="#artistbooking"
             scrollToSection={scrollToSection}
             title="Artist Bookings"
             description="From homegrown indie sensations and Bollywood stars to globally followed DJs, find the perfect artists to match your vibe and make your event a huge, unforgettable hit."
             highlightColor="green"
           />
         </div>
-        <div className="grid md:grid-cols-3 gap-6 w-full mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-8">
           <Card
             icon={
               <svg
@@ -89,12 +87,11 @@ export const ServicesSection = ({ scrollToSection }) => {
                 />
               </svg>
             }
-            link={"#eventproduction"}
+            link="#eventproduction"
             scrollToSection={scrollToSection}
             title="Event Production"
             description="From creative concepts to smooth execution, making sure your event truly stands out!"
             highlightColor="green"
-            className="p-6"
           />
           <Card
             icon={
@@ -113,12 +110,11 @@ export const ServicesSection = ({ scrollToSection }) => {
                 />
               </svg>
             }
-            link={"#music-festivals"}
+            link="#music-festivals"
             scrollToSection={scrollToSection}
             title="Music Festivals"
             description="Epic nights filled with huge artists, good vibes, and pure musical magic!"
             highlightColor="green"
-            className="p-6"
           />
           <Card
             icon={
@@ -141,7 +137,6 @@ export const ServicesSection = ({ scrollToSection }) => {
             title="Corporate Events"
             description="Celebrate milestones, connect teams, and create lasting memories in a unique way!"
             highlightColor="green"
-            className="p-6"
           />
         </div>
       </motion.div>
