@@ -48,7 +48,7 @@ const HomePage = () => {
 
   const collegeImages = [
     { src: "/collegefestival1.jpg", title: "IIM Trichy - Dhruva" },
-    { src: "/collegefestival2.jpg", title: "GL Bajaj - Mohan Sisters" },
+    { src: "/collegefestival2.jpg", title: "GL Bajaj " },
     { src: "/collegefestival3.jpg", title: "IIT Kharagpur - Kshitij" },
     { src: "/collegefestival4.jpg", title: "IISC Bangalore - Pravega" },
     { src: "/collegefestival5.jpg", title: "IIT GandhiNagar - Blithchron" },
@@ -83,7 +83,6 @@ const HomePage = () => {
     { src: "/artistBooking/band2.jpg" },
     {
       src: "/artistBooking/band3.jpg",
-      title: "(Bands) - As We Keep Searching1",
     },
     { src: "/artistBooking/band4.jpg" },
     { src: "/artistBooking/band5.jpg" },
@@ -354,7 +353,7 @@ const HomePage = () => {
       }
     };
 
-    const throttledHandleScroll = throttle(handleScroll, 50);
+    const throttledHandleScroll = throttle(handleScroll, 10);
     window.addEventListener("scroll", throttledHandleScroll);
 
     return () => {
